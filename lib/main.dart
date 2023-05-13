@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:internship_2/product.dart';
 
+import 'Api_1.dart';
+import 'Api_2.dart';
 import 'BottomNavi.dart';
 
 void main() {
@@ -196,29 +198,37 @@ class _MyHomePageState extends State<MyHomePage> {
                           Expanded(
                             child: Padding(
                               padding: const EdgeInsets.all(8.0),
-                              child: Container(
-                                height: 60,
-                                decoration: BoxDecoration(
-                                  border: Border.all(color: Colors.blue),
-                                  borderRadius: BorderRadius.circular(10),
-                                ),
-                                child: Padding(
-                                  padding: const EdgeInsets.symmetric(
-                                      vertical: 10, horizontal: 20),
-                                  child: Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceAround,
-                                    children: [
-                                      Icon(
-                                        Icons.collections_bookmark_rounded,
-                                        color: Colors.blue,
-                                      ),
-                                      Text(
-                                        "Programs",
-                                        style: TextStyle(
-                                            color: Colors.blue, fontSize: 18),
-                                      ),
-                                    ],
+                              child: GestureDetector(
+                                onTap: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: ((context) => Api_1())));
+                                },
+                                child: Container(
+                                  height: 60,
+                                  decoration: BoxDecoration(
+                                    border: Border.all(color: Colors.blue),
+                                    borderRadius: BorderRadius.circular(10),
+                                  ),
+                                  child: Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                        vertical: 10, horizontal: 20),
+                                    child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceAround,
+                                      children: [
+                                        Icon(
+                                          Icons.collections_bookmark_rounded,
+                                          color: Colors.blue,
+                                        ),
+                                        Text(
+                                          "API_1",
+                                          style: TextStyle(
+                                              color: Colors.blue, fontSize: 18),
+                                        ),
+                                      ],
+                                    ),
                                   ),
                                 ),
                               ),
@@ -227,29 +237,37 @@ class _MyHomePageState extends State<MyHomePage> {
                           Expanded(
                             child: Padding(
                               padding: const EdgeInsets.all(8.0),
-                              child: Container(
-                                height: 60,
-                                decoration: BoxDecoration(
-                                  border: Border.all(color: Colors.blue),
-                                  borderRadius: BorderRadius.circular(10),
-                                ),
-                                child: Padding(
-                                  padding: const EdgeInsets.symmetric(
-                                      vertical: 10, horizontal: 20),
-                                  child: Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceAround,
-                                    children: [
-                                      Icon(
-                                        Icons.help,
-                                        color: Colors.blue,
-                                      ),
-                                      Text(
-                                        "Get help",
-                                        style: TextStyle(
-                                            color: Colors.blue, fontSize: 18),
-                                      ),
-                                    ],
+                              child: GestureDetector(
+                                onTap: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: ((context) => Api_2())));
+                                },
+                                child: Container(
+                                  height: 60,
+                                  decoration: BoxDecoration(
+                                    border: Border.all(color: Colors.blue),
+                                    borderRadius: BorderRadius.circular(10),
+                                  ),
+                                  child: Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                        vertical: 10, horizontal: 20),
+                                    child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceAround,
+                                      children: [
+                                        Icon(
+                                          Icons.help,
+                                          color: Colors.blue,
+                                        ),
+                                        Text(
+                                          "API_2",
+                                          style: TextStyle(
+                                              color: Colors.blue, fontSize: 18),
+                                        ),
+                                      ],
+                                    ),
                                   ),
                                 ),
                               ),
